@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Frontend 2 🚀</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: #fff;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+        h1 { font-size: 3rem; margin-bottom: 20px; animation: glow 1.5s infinite alternate; }
+        @keyframes glow { from { text-shadow: 0 0 10px #fff; } to { text-shadow: 0 0 20px #ff00ff; } }
+        #backend-response { font-size: 1.5rem; background: rgba(255,255,255,0.2); padding: 10px; border-radius: 10px; }
+    </style>
+</head>
+<body>
+    <h1>🚀 Je suis le front 2</h1>
+    <p id="backend-response">En attente du backend...</p>
+
+    <script>
+        fetch('/api')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('backend-response').innerText = `✅ Backend : ${data}`;
+            })
+            .catch(error => {
+                document.getElementById('backend-response').innerText = `❌ Erreur : ${error}`;
+            });
+    </script>
+</body>
+</html>
