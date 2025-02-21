@@ -13,10 +13,10 @@ app.use(cors({
 
 // 📢 Endpoint API
 app.get('/api', (req, res) => {
-    res.send('Je suis le backend 1');
+    res.send('Je suis le backend 2');
 });
 
 // 🚀 Démarrage du serveur
-app.listen(PORT, '10.2.0.4', () => {
+app.listen(PORT, '10.2.0.5', () => {
     console.log(`Backend API disponible sur http://10.2.0.5:${PORT}/api`);
 });
