@@ -13,7 +13,7 @@ app.use(cors({
 
 // 📢 Endpoint API
 app.get('/api', (req, res) => {
-    res.send('Je suis le backend 2');
+    res.send('BACKEND 2');
 });
 
 // 🚀 Démarrage du serveur
